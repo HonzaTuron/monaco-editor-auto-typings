@@ -455,6 +455,7 @@ var ImportResolver = /** @class */ (function () {
         uri = uri.with({ path: uri.path.replace('@types/', '') });
         if (!this.monaco.editor.getModel(uri)) {
             this.monaco.editor.createModel(source, 'typescript', uri);
+            this.monaco.editor.createModel(source, 'javascript', uri);
             this.newImportsResolved = true;
         }
     };
